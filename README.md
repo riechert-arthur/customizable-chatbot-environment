@@ -4,6 +4,7 @@ A web interface that allows you to seamlessly interact between various LLM model
 ## Technologies
 - Java
 - Spring
+- Typescript
 - Next
 - React
 
