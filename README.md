@@ -7,6 +7,7 @@ A web interface that allows you to seamlessly interact between various LLM model
 - Typescript
 - Next
 - React
+- AWS S3
 
 ## Roadmap
 - Web Interface
