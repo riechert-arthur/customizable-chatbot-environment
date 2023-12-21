@@ -1,4 +1,5 @@
 package com.arthur.app.service.utilities;
+
 /**
  * Stores messages for large language models by the origin
  * of the message and the content.
@@ -6,12 +7,13 @@ package com.arthur.app.service.utilities;
  * NOTE: Messages are immutable.
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.0.1
  */
+
 public class Message {
 
     /** The entity that created the message. */
-    private final String role;
+    private final Role role;
 
     /** The message itself. */
     private final String content;
@@ -22,7 +24,7 @@ public class Message {
      * @param role The entity that created the message.
      * @param content The message itself.
      */
-    public Message(String role, String content) {
+    public Message(Role role, String content) {
         this.role = role;
         this.content = content;
     }
@@ -37,7 +39,7 @@ public class Message {
         this.content = message.content;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
@@ -47,6 +49,9 @@ public class Message {
 
     @Override
     public String toString() {
-        return String.format("Role: %s | Content: %s", role, content);
+        return String.format(
+            "Role: %s | Content: %s",
+            role.getValue(), content
+        );
     }
 }
