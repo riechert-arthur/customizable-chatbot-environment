@@ -21,7 +21,7 @@ public class Conversation {
      * @param messages A variable number of messages.
      */
     public Conversation(Message... messages) {
-        conversation = Arrays.asList(messages);
+        conversation = new ArrayList<Message>(Arrays.asList(messages));
     }
 
     /**
@@ -38,7 +38,7 @@ public class Conversation {
     @Override
     public String toString() {
 
-        StringBuilder conversation = StringBuilder(this.conversation);
+        StringBuilder conversation = new StringBuilder();
 
         for (Message message : this.conversation) {
             conversation.append(message.toString() + "\n");
