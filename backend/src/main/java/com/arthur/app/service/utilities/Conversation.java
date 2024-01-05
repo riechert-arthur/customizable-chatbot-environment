@@ -7,7 +7,7 @@ import java.util.Arrays;
  * A list that stores all messages. 
  *
  * @author Arthur Riechert
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class Conversation {
     
@@ -28,7 +28,16 @@ public class Conversation {
      * Creates an empty conversation.
      */
     public Conversation() {
-        conversation = new ArrayList<>();
+        this();
+    }
+
+    /**
+     * Copies a conversation by creating a new object.
+     *
+     * @param conversation The conversation to copy.
+     */
+    public Conversation(Conversation object) {
+        this(object.conversation.toArray())
     }
 
     public ArrayList<Message> getConversation() {
