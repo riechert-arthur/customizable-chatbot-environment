@@ -35,17 +35,12 @@ public class Message {
      * @param message The message to be copied.
      */
     public Message(Message message) {
-        this.role = message.role;
-        this.content = message.content;
+        this(message.role, message.content)
     }
 
-    public Role getRole() {
-        return role;
-    }
+    public Role getRole() { return role; }
 
-    public String getContent() {
-        return content;
-    }
+    public String getContent() { return content; }
 
     @Override
     public String toString() {

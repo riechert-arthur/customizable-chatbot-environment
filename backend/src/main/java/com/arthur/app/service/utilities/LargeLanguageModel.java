@@ -58,23 +58,13 @@ public abstract class LargeLanguageModel {
     /** Implements a method to get completions based on conversation and new message. */
     public abstract Message getCompletion(Conversation conversation, Message message)
 
-    public int getMaxTokens() {
-        return maxTokens;
-    }
+    public int getMaxTokens() { return maxTokens; }
 
-    public double getTemperature() {
-        return temperature;
-    }
+    public double getTemperature() { return temperature; }
 
-    public Message getSystemMessage() {
-        return systemMessage;
-    }
+    public Message getSystemMessage() { return systemMessage; }
 
-    public Provider getProvider() {
-        return provider;
-    }
+    public Provider getProvider() { return provider; }
 
-    public Conversation getConversation() {
-        return new Conversation(conversation);
-    }
+    public Conversation getConversation() { return new Conversation(conversation); }
 }
