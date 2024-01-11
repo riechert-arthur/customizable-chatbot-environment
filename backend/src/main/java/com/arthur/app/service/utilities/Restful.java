@@ -10,5 +10,5 @@ package com.arthur.service.utilies;
 public interface Restful {
 
     /** The API key needed to access the service. */
-    private String API_KEY;
+    private final String API_KEY;
 }
